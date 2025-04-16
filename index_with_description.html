@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+<style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+<style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css" rel="stylesheet"/>
+<meta content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<style>
+                #map_1403a075ff7531b56e9bcf190883f705 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+</head>
+<body><div style="position: absolute; top: 10px; left: 10px; background-color: rgba(255,255,255,0.9); padding: 15px; max-width: 350px; z-index: 9999; border-radius: 10px; font-family: Arial, sans-serif; font-size: 14px;">🌍 Messina Earthquake Risk Map
+This interactive map shows high, medium, and low earthquake risk zones across Messina.
+🟥 High Risk – near active faults
+🟧 Medium Risk – moderately vulnerable
+🟩 Low Risk – relatively safe areas
+
+📍 Key Areas: Torre Faro, Ganzirri, Papardo, City Center
+🟥 Fault lines shown in red &amp; purple
+Created by Educationaltr / Ali
+</div>
+<div class="folium-map" id="map_1403a075ff7531b56e9bcf190883f705"></div>
+</body>
+<script>
+    
+    
+            var map_1403a075ff7531b56e9bcf190883f705 = L.map(
+                "map_1403a075ff7531b56e9bcf190883f705",
+                {
+                    center: [38.1938, 15.5557],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4f30eb85b9f296e356c2cf07934edca3 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_1403a075ff7531b56e9bcf190883f705);
+        
+    
+            var circle_marker_9091c760dd171af4adeef4a032da5baf = L.circleMarker(
+                [38.18, 15.54],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_1403a075ff7531b56e9bcf190883f705);
+        
+    
+        var popup_d3fe96bf75080c1eb8da01bd904074e5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6b2132652086ae10bce7e1003ef6c000 = $(`<div id="html_6b2132652086ae10bce7e1003ef6c000" style="width: 100.0%; height: 100.0%;">High Risk bölgesi</div>`)[0];
+            popup_d3fe96bf75080c1eb8da01bd904074e5.setContent(html_6b2132652086ae10bce7e1003ef6c000);
+        
+
+        circle_marker_9091c760dd171af4adeef4a032da5baf.bindPopup(popup_d3fe96bf75080c1eb8da01bd904074e5)
+        ;
+
+        
+    
+    
+            var circle_marker_756678cb7574e2016c849a924365aa9d = L.circleMarker(
+                [38.19, 15.56],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_1403a075ff7531b56e9bcf190883f705);
+        
+    
+        var popup_90ecb037ebb8033eb97479fc9d65922e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_db538c1694460928652acc189bc36db3 = $(`<div id="html_db538c1694460928652acc189bc36db3" style="width: 100.0%; height: 100.0%;">High Risk bölgesi</div>`)[0];
+            popup_90ecb037ebb8033eb97479fc9d65922e.setContent(html_db538c1694460928652acc189bc36db3);
+        
+
+        circle_marker_756678cb7574e2016c849a924365aa9d.bindPopup(popup_90ecb037ebb8033eb97479fc9d65922e)
+        ;
+
+        
+    
+    
+            var circle_marker_eea9c7d32563545edaee6b12801bce0c = L.circleMarker(
+                [38.2, 15.58],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_1403a075ff7531b56e9bcf190883f705);
+        
+    
+        var popup_e479f00d7e152932f555e249d2fe9837 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8cc2a1376e41db7a1290eba1d54cb5c1 = $(`<div id="html_8cc2a1376e41db7a1290eba1d54cb5c1" style="width: 100.0%; height: 100.0%;">High Risk bölgesi</div>`)[0];
+            popup_e479f00d7e152932f555e249d2fe9837.setContent(html_8cc2a1376e41db7a1290eba1d54cb5c1);
+        
+
+        circle_marker_eea9c7d32563545edaee6b12801bce0c.bindPopup(popup_e479f00d7e152932f555e249d2fe9837)
+        ;
+
+        
+    
+    
+            var circle_marker_117a51a1ece564c7bfaebcc38ad8b0c1 = L.circleMarker(
+                [38.2715, 15.6425],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_1403a075ff7531b56e9bcf190883f705);
+        
+    
+        var popup_5ca506c5935bf7b8a3d221dc745438ec = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6b44f884cc70667be2fcb1938bf3928c = $(`<div id="html_6b44f884cc70667be2fcb1938bf3928c" style="width: 100.0%; height: 100.0%;">High Risk bölgesi</div>`)[0];
+            popup_5ca506c5935bf7b8a3d221dc745438ec.setContent(html_6b44f884cc70667be2fcb1938bf3928c);
+        
+
+        circle_marker_117a51a1ece564c7bfaebcc38ad8b0c1.bindPopup(popup_5ca506c5935bf7b8a3d221dc745438ec)
+        ;
+
+        
+    
+    
+            var circle_marker_558d3573c97b9b6deac53622d6e2ed5c = L.circleMarker(
+                [38.16, 15.52],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_1403a075ff7531b56e9bcf190883f705);
+        
+    
+        var popup_0aa8c8fd1133e9de48e0bcb5a59c4ed1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8ea4bd4a66012f2625c7ca210aa6f3fb = $(`<div id="html_8ea4bd4a66012f2625c7ca210aa6f3fb" style="width: 100.0%; height: 100.0%;">Medium Risk bölgesi</div>`)[0];
+            popup_0aa8c8fd1133e9de48e0bcb5a59c4ed1.setContent(html_8ea4bd4a66012f2625c7ca210aa6f3fb);
+        
+
+        circle_marker_558d3573c97b9b6deac53622d6e2ed5c.bindPopup(popup_0aa8c8fd1133e9de48e0bcb5a59c4ed1)
+        ;
+
+        
+    
+    
+            var circle_marker_cf32ee7cef4707ccea7b2deaeaa1daf0 = L.circleMarker(
+                [38.17, 15.53],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_1403a075ff7531b56e9bcf190883f705);
+        
+    
+        var popup_95bbc0b295d5e1a26465e381cafd115f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6346e0fa5215b115807fa1a841d5163a = $(`<div id="html_6346e0fa5215b115807fa1a841d5163a" style="width: 100.0%; height: 100.0%;">Medium Risk bölgesi</div>`)[0];
+            popup_95bbc0b295d5e1a26465e381cafd115f.setContent(html_6346e0fa5215b115807fa1a841d5163a);
+        
+
+        circle_marker_cf32ee7cef4707ccea7b2deaeaa1daf0.bindPopup(popup_95bbc0b295d5e1a26465e381cafd115f)
+        ;
+
+        
+    
+    
+            var circle_marker_8d8b2dc42c1ea7e31c0128326e785d6b = L.circleMarker(
+                [38.21, 15.57],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_1403a075ff7531b56e9bcf190883f705);
+        
+    
+        var popup_1e5cd360faa8856e3510e058149da047 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e9a1deb9474f9c83f8742e9b0729233f = $(`<div id="html_e9a1deb9474f9c83f8742e9b0729233f" style="width: 100.0%; height: 100.0%;">Medium Risk bölgesi</div>`)[0];
+            popup_1e5cd360faa8856e3510e058149da047.setContent(html_e9a1deb9474f9c83f8742e9b0729233f);
+        
+
+        circle_marker_8d8b2dc42c1ea7e31c0128326e785d6b.bindPopup(popup_1e5cd360faa8856e3510e058149da047)
+        ;
+
+        
+    
+    
+            var circle_marker_ecdba3310d2934403fd440ca100d0771 = L.circleMarker(
+                [38.254, 15.619],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_1403a075ff7531b56e9bcf190883f705);
+        
+    
+        var popup_bfebb9a68ccf17fc1ba05919d05232ea = L.popup({"maxWidth": "100%"});
+
+        
+            var html_44cb68cc18e77cb0691173a3edbd275a = $(`<div id="html_44cb68cc18e77cb0691173a3edbd275a" style="width: 100.0%; height: 100.0%;">Medium Risk bölgesi</div>`)[0];
+            popup_bfebb9a68ccf17fc1ba05919d05232ea.setContent(html_44cb68cc18e77cb0691173a3edbd275a);
+        
+
+        circle_marker_ecdba3310d2934403fd440ca100d0771.bindPopup(popup_bfebb9a68ccf17fc1ba05919d05232ea)
+        ;
+
+        
+    
+    
+            var circle_marker_5603ddf13812fa401fd3caffa35fb993 = L.circleMarker(
+                [38.14, 15.5],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_1403a075ff7531b56e9bcf190883f705);
+        
+    
+        var popup_769780dc75d779b30807f66d99dec375 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_affee44edaac2ab26a152964b4e0b717 = $(`<div id="html_affee44edaac2ab26a152964b4e0b717" style="width: 100.0%; height: 100.0%;">Low Risk bölgesi</div>`)[0];
+            popup_769780dc75d779b30807f66d99dec375.setContent(html_affee44edaac2ab26a152964b4e0b717);
+        
+
+        circle_marker_5603ddf13812fa401fd3caffa35fb993.bindPopup(popup_769780dc75d779b30807f66d99dec375)
+        ;
+
+        
+    
+    
+            var circle_marker_374127bdebd6c8c204bfa30172ad162d = L.circleMarker(
+                [38.22, 15.59],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_1403a075ff7531b56e9bcf190883f705);
+        
+    
+        var popup_4287547080541c5f419ca152528e3a66 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dd5f99b7256ce949066aa620f6d23d87 = $(`<div id="html_dd5f99b7256ce949066aa620f6d23d87" style="width: 100.0%; height: 100.0%;">Low Risk bölgesi</div>`)[0];
+            popup_4287547080541c5f419ca152528e3a66.setContent(html_dd5f99b7256ce949066aa620f6d23d87);
+        
+
+        circle_marker_374127bdebd6c8c204bfa30172ad162d.bindPopup(popup_4287547080541c5f419ca152528e3a66)
+        ;
+
+        
+    
+    
+            var circle_marker_9b74f4453c1f2d52ab584278b72cf994 = L.circleMarker(
+                [38.2266, 15.5896],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_1403a075ff7531b56e9bcf190883f705);
+        
+    
+        var popup_077fe892819353db29c00809ed8cc12b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e84976172a64af733d3ed678743a2a19 = $(`<div id="html_e84976172a64af733d3ed678743a2a19" style="width: 100.0%; height: 100.0%;">Low Risk bölgesi</div>`)[0];
+            popup_077fe892819353db29c00809ed8cc12b.setContent(html_e84976172a64af733d3ed678743a2a19);
+        
+
+        circle_marker_9b74f4453c1f2d52ab584278b72cf994.bindPopup(popup_077fe892819353db29c00809ed8cc12b)
+        ;
+
+        
+    
+    
+            var poly_line_7f606dd29cb4f395fe77f1d5e210e88c = L.polyline(
+                [[38.03, 15.49], [38.25, 15.61]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_1403a075ff7531b56e9bcf190883f705);
+        
+    
+            poly_line_7f606dd29cb4f395fe77f1d5e210e88c.bindTooltip(
+                `<div>
+                     Messina-Taormina Fayı
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_7545870b36c24f097d6ba0ebdfd97b74 = L.polyline(
+                [[38.0, 15.55], [38.28, 15.65]],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": "10", "dashOffset": null, "fill": false, "fillColor": "darkred", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1403a075ff7531b56e9bcf190883f705);
+        
+    
+            poly_line_7545870b36c24f097d6ba0ebdfd97b74.bindTooltip(
+                `<div>
+                     Messina Fayı
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_968ab4df7574ce6fb22b8707f422efc7 = L.polyline(
+                [[37.9, 15.4], [38.4, 15.7]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": "5", "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_1403a075ff7531b56e9bcf190883f705);
+        
+    
+            poly_line_968ab4df7574ce6fb22b8707f422efc7.bindTooltip(
+                `<div>
+                     Siculo-Calabrian Rift
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5e3108b4922b98588b74151f6bf9b602 = L.marker(
+                [38.1938, 15.5557],
+                {}
+            ).addTo(map_1403a075ff7531b56e9bcf190883f705);
+        
+    
+            var icon_e4c97b30db54b4676703d679f109287b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5e3108b4922b98588b74151f6bf9b602.setIcon(icon_e4c97b30db54b4676703d679f109287b);
+        
+    
+        var popup_18bb75046bf7efc9c2a4a16b7e478e39 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b70c877a7031b8dcdaecb1b4658d0453 = $(`<div id="html_b70c877a7031b8dcdaecb1b4658d0453" style="width: 100.0%; height: 100.0%;">Messina Şehir Merkezi</div>`)[0];
+            popup_18bb75046bf7efc9c2a4a16b7e478e39.setContent(html_b70c877a7031b8dcdaecb1b4658d0453);
+        
+
+        marker_5e3108b4922b98588b74151f6bf9b602.bindPopup(popup_18bb75046bf7efc9c2a4a16b7e478e39)
+        ;
+
+        
+    
+</script>
+</html>
